@@ -25,7 +25,8 @@ export default class Users{
                 if(headers[j] === "Birth Year"){
                     obj[headers[j]] = data[i][j].toLocaleDateString('fr-FR') as Date
                 }else if(headers[j] === "Skills"){
-                    obj[headers[j]] = data[i][j].split(", ") 
+                    // Only unique
+                    obj[headers[j]] = Array.from(new Set(data[i][j].split(",").map((skill: string) => skill.trim())))
                 }
                 else{
                     obj[headers[j]] = data[i][j]

@@ -1,0 +1,1 @@
+export type Job = 'CAP' | 'Bac + 2' | 'Bac' | 'Bac + 3' | 'Bac + 4' | 'Brevet' | 'Bac pro' | 'Bac + 5' | 'Doctorat' | 'Bac général'
